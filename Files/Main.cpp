@@ -16,10 +16,10 @@ void main()
 	if (strcmp(filename + strlen(filename) - 4, ".txt"))
 		strcat_s(filename, _MAX_FNAME, ".txt");
 
-	ofstream fout;                 // 1) Создаем поток
+	ofstream fout;									 // 1) Создаем поток
 	fout.open(filename, std::ios_base::app);         // 2) Открываем поток
-	fout << "Hello files" << endl; // 3) Пишем в поток
-	fout.close();                  // 4) Закрываем поток
+	fout << "Hello files" << endl;					 // 3) Пишем в поток
+	fout.close();									 // 4) Закрываем поток
 
 	char sz_command[_MAX_FNAME] = "notepad ";
 	strcat_s(sz_command, _MAX_FNAME, filename);
